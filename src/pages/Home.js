@@ -7,6 +7,14 @@ const Home = () => {
 
     const [username, setUsername] = useState('')
 
+    const handleRoomClick = (e) => {
+        setRoomId(e.target.value)
+    }
+
+    const handleUserClick = (e) => {
+        setUsername(e.target.value)
+    }
+
     const createNewRoom = (e) => {
         e.preventDefault()
         const id = uuidV4();
@@ -19,8 +27,8 @@ const Home = () => {
                 <img className='homePageLogo' src="/code-sync.png" alt="code-sync-logo" />
                 <h4 className='mainLabel'>Paste Invitation ROOM ID</h4>
                 <div className="inputGroup">
-                    <input value={roomId} onChange={(e) => setRoomId(e.target.value)} type="text" className='inputBox' placeholder='ROOM ID' />
-                    <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" className='inputBox' placeholder='USERNAME' />
+                    <input value={roomId} onChange={handleRoomClick} type="text" className='inputBox' placeholder='ROOM ID' />
+                    <input value={username} onChange={handleUserClick} type="text" className='inputBox' placeholder='USERNAME' />
                     <button className="btn joinBtn">Join</button>
                     <span className='createInfo'>
                         If you don't have an invite then create &nbsp;
