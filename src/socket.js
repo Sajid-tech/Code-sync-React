@@ -1,7 +1,6 @@
 import { io } from 'socket.io-client';
 
 export const initSocket = async () => {
-    // this will you get from guidelines
     const options = {
         'force new connection': true,
         reconnectionAttempt: 'Infinity',
