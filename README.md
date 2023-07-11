@@ -1,6 +1,8 @@
 #Run in local host
+
 In terminal 1 --> npm run start
-In terminal 2 -->
+
+In terminal 2 --> npm run server:dev
 
 #Working Live
 
